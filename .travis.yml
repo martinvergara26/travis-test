@@ -8,6 +8,6 @@ install:
 
 before_script:
   - cd django_travis
-  
+
 script:
   - python manage.py test
