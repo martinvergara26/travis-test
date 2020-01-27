@@ -8,4 +8,4 @@ class SimpleTests(TestCase):
 
     def test_second_test(self):
         print('On second test')
-        self.assertIs(False, False)
+        self.assertIs(False, True)
