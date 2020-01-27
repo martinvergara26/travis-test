@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  app:
+    build: .
+    image: &app django_travis
+    container_name: django_travis_app
+    restart: "no"
+    command: sh deploy_scripts/start_app.sh
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    networks:
+      - django_travis
+
+networks:
+  django_travis:
+    name: django_travis
