@@ -6,5 +6,8 @@ python:
 install:
   - pip install -r requirements.txt
 
+before_script:
+  - cd django_travis
+  
 script:
-  - python django_travis/manage.py test
+  - python manage.py test
