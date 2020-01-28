@@ -15,4 +15,4 @@ jobs:
     - name: Build the docker-compose stack
       run: docker-compose up -d
     - name: Django test
-      run: docker exec -ti django_travis_app /bin/ash -c "cd django_travis && python manage.py test"
+      run: docker exec django_travis_app /bin/ash -c "cd django_travis && python manage.py test"
