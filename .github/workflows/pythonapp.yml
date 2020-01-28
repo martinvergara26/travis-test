@@ -12,7 +12,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build the docker-compose stack
-      run: docker-compose up -d
     - name: Django test
-      run: docker exec django_travis_app /bin/ash -c "cd django_travis && python manage.py test"
+      run: docker run -it -v $PWD/:/inveted_folder python:3.7.3-alpine3.10 /bin/ash -c "ls"
